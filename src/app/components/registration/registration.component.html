@@ -1,53 +1,70 @@
-
-    
-<body>  
-  <div class="container">
-    <div class="header">
-      <h2>Fundoo</h2>
-      <h3>Create your Fundoo Account</h3>
-    </div>
-    <div class="inputfields">
-      <div class="mr">
-        <mat-form-field appearance="outline">
-          <mat-label>firstname</mat-label>
-          <input matInput placeholder="FirstName">
-        </mat-form-field>
+<body fxLayout="row" fxLayoutAlign="center center">
+  <div class="main-container" fxLayout="row" fxLayoutAlign="space-around start">
+    <div class="container" fxLayout="column" fxLayoutAlign="space-around start">
+      <div class="header">
+        <div class="fundoo">
+          <span class="f">F</span>
+          <span class="u">u</span>
+          <span class="n">n</span>
+          <span class="d">d</span>
+          <span class="o">o</span>
+          <span class="O">o</span>
+        </div>
+        <div class="sub-header">
+          <h3>Create your Fundoo Account</h3>
+        </div>
       </div>
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>lastname</mat-label>
-          <input matInput placeholder="LastName">
-        </mat-form-field>
+      <div class="inputfields" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div class="mr">
+          <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="FirstName" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="LastName" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="inputfields">
+        <div>
+          <mat-form-field class="mail" appearance="outline">
+            <mat-label>Email id</mat-label>
+            <input matInput placeholder="Email" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div
+        class="inputfields"
+        fxLayout="row"
+        fxLayoutAlign="space-evenly center"
+      >
+        <div class="mr">
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" />
+            <!-- <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button> -->
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm</mat-label>
+            <input matInput placeholder="ConformPassword" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="inputfields1">
+        <a class="sign">sign in instead</a>
+        <button class="next">Next</button>
       </div>
     </div>
-    <div class="inputfields">
-      <mat-form-field appearance="outline">
-        <mat-label>email</mat-label>
-        <input matInput placeholder="Email">
-      </mat-form-field>
-    </div>
-    <div class="inputfields">
-      <div class="mr">
-        <mat-form-field appearance="outline">
-          <mat-label>password</mat-label>
-          <input matInput placeholder="Password">
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>conformpassword</mat-label>
-          <input matInput placeholder="ConformPassword">
-        </mat-form-field>
-     </div>  
+    <div class="img">
+      <img src="../../../assets/downloadgoogle.jpg" />
     </div>
   </div>
 </body>
-    <!--<mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Firstname">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>-->
-
-    
- 
