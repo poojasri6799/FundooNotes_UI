@@ -39,16 +39,13 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="inputfields">
-        <div>
+      <div>
           <mat-form-field class="mail" appearance="outline">
             <mat-label>Email id</mat-label>
             <input matInput placeholder="Email" />
           </mat-form-field>
-        </div>
       </div>
       <div
-        class="inputfields"
         fxLayout="row"
         fxLayoutAlign="space-evenly center"
         fxLayout.xs="column"
@@ -56,7 +53,6 @@
         <div class="mr">
           <mat-form-field class="password" appearance="outline">
             <mat-label>Password</mat-label>
-
             <input matInput [type]="hide ? 'password' : 'text'" required />
             <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
               >{{ hide ? "visibility_off" : "visibility" }}
