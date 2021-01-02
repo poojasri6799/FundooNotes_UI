@@ -1,56 +1,117 @@
 
-.main-container{
-    border: 1px solid rgb(206, 201, 201);
-    border-radius: 10px;
-    padding: 25px 40px 25px 40px;
+.main-container {
+  border: 1px solid rgb(206, 201, 201);
+  border-radius: 10px;
+  padding: 25px 30px 25px 30px;
 }
 
-.img{
-    margin-top: 10%;
+.img {
+  margin-top: 10%;
+  display: flex;
+  align-items: flex-end;
 }
 
-.f, .d{
-    color: blue;
+
+.f,
+.d {
+  color: blue;
 }
-.u, .O{
-    color: red;
+.u,
+.O {
+  color: red;
 }
-.n{
-    color: yellow;
+.n {
+  color: yellow;
 }
 
-.o{
-    color: green;
+.o {
+  color: green;
 }
 
-.fundoo{
-    font-size: xx-large;
+.fundoo {
+  font-size: xx-large;
 }
 
-.sub-header{
-    margin-top: 15px;
+.sub-header {
+  margin-top: 15px;
 }
 
-.mr{
-    margin-right: 10px;
+.mr {
+  margin-right: 10px;
 }
 
-.mail{
+.mail {
+  width: 415px;
+}
+
+.sign {
+  color: royalblue;
+  margin-right: 255px;
+  font-weight: bold;
+}
+
+.next {
+  background-color: royalblue;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 5px 8px 5px;
+  font-size: 15px;
+}
+
+.password {
+  width: 200px;
+}
+
+@media screen and (max-width: 700px) {
+  .img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .name {
     width: 415px;
+  }
+
+  .password {
+    width: 415px;
+  }
+
+  .mr {
+    margin-right: 0px;
+  }
 }
 
-.sign{
+@media screen and (max-width: 500px) {
+  .name {
+    width: 300px;
+  }
 
+  .password {
+    width: 300px;
+  }
+
+  .mail {
+    width: 300px;
+  }
+
+  .inputfields1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sign {
     color: royalblue;
-    margin-right: 250px;
+    margin-right: 200px;
+    margin-bottom: 30px;
     font-weight: bold;
-}
+  }
 
-.next{
-    background-color: royalblue;
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;   
-}
+  .mr {
+    margin-right: 0px;
+  }
 
+  .main-container {
+    border: none;
+  }
+}

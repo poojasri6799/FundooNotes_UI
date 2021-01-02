@@ -1,6 +1,12 @@
 <body fxLayout="row" fxLayoutAlign="center center">
   <div class="main-container" fxLayout="row" fxLayoutAlign="space-around start">
-    <div class="container" fxLayout="column" fxLayoutAlign="space-around start">
+    <div
+      class="container"
+      fxLayout="column"
+      fxLayoutAlign="space-around start"
+      fxLayout.xs="column"
+      fxLayoutAlign.xs="start center"
+    >
       <div class="header">
         <div class="fundoo">
           <span class="f">F</span>
@@ -14,15 +20,20 @@
           <h3>Create your Fundoo Account</h3>
         </div>
       </div>
-      <div class="inputfields" fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div
+        class="inputfields"
+        fxLayout="row"
+        fxLayoutAlign="space-evenly center"
+        fxLayout.xs="column"
+      >
         <div class="mr">
-          <mat-form-field appearance="outline">
+          <mat-form-field class="name" appearance="outline">
             <mat-label>First name</mat-label>
             <input matInput placeholder="FirstName" />
           </mat-form-field>
         </div>
         <div>
-          <mat-form-field appearance="outline">
+          <mat-form-field class="name" appearance="outline">
             <mat-label>Last name</mat-label>
             <input matInput placeholder="LastName" />
           </mat-form-field>
@@ -40,27 +51,31 @@
         class="inputfields"
         fxLayout="row"
         fxLayoutAlign="space-evenly center"
+        fxLayout.xs="column"
       >
         <div class="mr">
-          <mat-form-field appearance="outline">
+          <mat-form-field class="password" appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="Password" />
-            <!-- <input matInput [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button> -->
+
+            <input matInput [type]="hide ? 'password' : 'text'" required />
+            <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+              >{{ hide ? "visibility_off" : "visibility" }}
+            </mat-icon>
           </mat-form-field>
         </div>
         <div>
-          <mat-form-field appearance="outline">
+          <mat-form-field class="password" appearance="outline">
             <mat-label>Confirm</mat-label>
-            <input matInput placeholder="ConformPassword" />
+            <input matInput [type]="hide ? 'password' : 'text'" required />
+            <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+              >{{ hide ? "visibility_off" : "visibility" }}
+            </mat-icon>
           </mat-form-field>
         </div>
       </div>
       <div class="inputfields1">
         <a class="sign">sign in instead</a>
-        <button class="next">Next</button>
+        <button class="next">Register</button>
       </div>
     </div>
     <div class="img">
