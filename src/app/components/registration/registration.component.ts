@@ -1,36 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from "@angular/forms"
-
+import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../../services/userservices/user.service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.scss']
+  styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit {
   hide = true;
 
-  constructor() { }
+  constructor(private router: Router, private userService: UserService) {}
 
   Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
     Validators.minLength(8),
-    Validators.required,]);
-  FirstName = new FormControl("", [
-    Validators.pattern('[a-zA-Z]{2,}')]);
-  LastName = new FormControl("", [
-    Validators.pattern('[a-zA-Z]{2,}')]);
-  ConfirmPassword = new FormControl("", [
+    Validators.required,
+  ]);
+  FirstName = new FormControl('', [Validators.pattern('[a-zA-Z]{2,}')]);
+  LastName = new FormControl('', [Validators.pattern('[a-zA-Z]{2,}')]);
+  ConfirmPassword = new FormControl('', [
     Validators.minLength(8),
-    Validators.required,]);
-
+    Validators.required,
+  ]);
 
   getEmailErrorMsg() {
     return this.Email.hasError('required')
       ? 'Email is Required'
       : 'please enter valid email';
   }
-
 
   getFirstNameErrorMsg() {
     return this.FirstName.hasError('required')
@@ -54,19 +53,25 @@ export class RegistrationComponent implements OnInit {
       ? 'ConfirmPassword is Required'
       : 'Password and ConfirmPassword do not match';
   }
-  
-
-  ngOnInit() : void{}
+  ngOnInit(): void {}
 
   register() {
-    let userdata = {
-      "FirstName": this.FirstName.value,
-      "LastName": this.LastName.value,
-      "email": this.Email.value,
-      //"phoneNumber": "9604445258",
-      "password": this.Password.value,
-      "ConfirmPassword": this.ConfirmPassword.value
-    }
+    let data = {
+      FirstName: this.FirstName.value,
+      LastName: this.LastName.value,
+      email: this.Email.value,
+      
+      password: this.Password.value,
+      service:'advance'
+
+      // "firstName": "Chia",
+      // "lastName": "Kokkiligadda",
+      // "mailId": "chai@gmail.com",
+      // "password": "chai@123"
+    };
+    //console.log(data);
+    this.userService.registration(data).subscribe((res) => {
+      console.log(' success ', res);
+    });
   }
-  
 }

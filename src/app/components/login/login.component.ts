@@ -28,9 +28,7 @@ export class LoginComponent implements OnInit {
       : 'Password should be minimum of 8 characters';
   }
 
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(): void {}
 
   login() {
     let userData = {
