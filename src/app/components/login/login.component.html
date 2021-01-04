@@ -1,36 +1,44 @@
 <body fxLayout="row" fxLayoutAlign="center center">
-  <div class="container" fxLayout="column" fxLayoutAlign="center center">
-    <div class="header" fxLayout="column">
-      <div class="fundoo">
-        <span class="f">F</span>
-        <span class="u">u</span>
-        <span class="n">n</span>
-        <span class="d">d</span>
-        <span class="o">o</span>
-        <span class="O">o</span>
+    <div class="container" fxLayout="column" fxLayoutAlign="center center">
+      <form (ngSubmit)="login()">
+      <div class="header" fxLayout="column" fxLayoutAlign="center center">
+        <div class="fundoo">
+          <span class="f">F</span>
+          <span class="u">u</span>
+          <span class="n">n</span>
+          <span class="d">d</span>
+          <span class="o">o</span>
+          <span class="O">o</span>
+        </div>
+        <h2 class="sub-header">Sign in</h2>
       </div>
-      <h2 class="sub-header">Sign in</h2>
+      <div>Use your Fundoo Account</div>
+      <div>
+        <mat-form-field class="mail" appearance="outline">
+          <mat-label>email</mat-label>
+          <input matInput placeholder="email" [formControl]="Email" autocomplete="off" required/>
+          <mat-error *ngIf="Email.invalid">
+            {{getEmailErrorMessage()}}
+        </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="password" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" [formControl]="Password" autocomplete="off" required/>
+          <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+            >{{ hide ? "visibility_off" : "visibility" }}
+          </mat-icon>
+          <mat-error *ngIf="Password.invalid">
+            {{ getPasswordErrorMessage() }}
+        </mat-error>
+        </mat-form-field>
+      </div>
+      <a [routerLink]="['/forget']">forget password?</a>
+      <div class="inputfields1">
+        <a class="sign" [routerLink]="['/register']">sign up instead</a>
+        <button class="next">Login</button>
+      </div>
+      </form>
     </div>
-    <div>Use your Fundoo Account</div>
-    <div>
-      <mat-form-field class="mail" appearance="outline">
-        <mat-label>Email id</mat-label>
-        <input matInput placeholder="Email" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field class="password" appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" required />
-        <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
-          >{{ hide ? "visibility_off" : "visibility" }}
-        </mat-icon>
-      </mat-form-field>
-    </div>
-    <a [routerLink]="['/forget']">forget password?</a>
-    <div class="inputfields1">
-      <a class="sign" [routerLink]="['/register']">sign up instead</a>
-      <button class="next">Login</button>
-    </div>
-  </div>
 </body>

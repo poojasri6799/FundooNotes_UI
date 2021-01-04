@@ -1,81 +1,115 @@
 <body fxLayout="row" fxLayoutAlign="center center">
-  <div class="main-container" fxLayout="row" fxLayoutAlign="space-around start">
     <div
-      class="container"
-      fxLayout="column"
+      class="main-container"
+      fxLayout="row"
       fxLayoutAlign="space-around start"
-      fxLayout.xs="column"
-      fxLayoutAlign.xs="start center"
     >
-      <div class="header">
-        <div class="fundoo">
-          <span class="f">F</span>
-          <span class="u">u</span>
-          <span class="n">n</span>
-          <span class="d">d</span>
-          <span class="o">o</span>
-          <span class="O">o</span>
-        </div>
-        <div class="sub-header">
-          <h3>Create your Fundoo Account</h3>
-        </div>
-      </div>
       <div
-        class="inputfields"
-        fxLayout="row"
-        fxLayoutAlign="space-evenly center"
+        class="container"
+        fxLayout="column"
+        fxLayoutAlign="space-around start"
         fxLayout.xs="column"
+        fxLayoutAlign.xs="start center"
       >
-        <div class="mr">
-          <mat-form-field class="name" appearance="outline">
-            <mat-label>First name</mat-label>
-            <input matInput placeholder="FirstName" />
-          </mat-form-field>
+      <form (ngSubmit)="register()">
+        <div class="header" fxLayout="column">
+          <div class="fundoo">
+            <span class="f">F</span>
+            <span class="u">u</span>
+            <span class="n">n</span>
+            <span class="d">d</span>
+            <span class="o">o</span>
+            <span class="O">o</span>
+          </div>
+          <div class="sub-header">
+            <h3>Create your Fundoo Account</h3>
+          </div>
+        </div>
+        <div
+          class="inputfields"
+          fxLayout="row"
+          fxLayoutAlign="space-evenly center"
+          fxLayout.xs="column"
+        >
+          <div class="mr">
+            <mat-form-field class="name" appearance="outline">
+              <mat-label>First name</mat-label>
+              <input matInput placeholder="FirstName" [formControl]="FirstName"
+              autocomplete="off"
+              required/>
+              <mat-error *ngIf="FirstName.invalid">
+                {{getFirstNameErrorMsg()}}
+            </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="name" appearance="outline">
+              <mat-label>Last name</mat-label>
+              <input matInput placeholder="LastName" [formControl]="LastName"
+              autocomplete="off"
+              required/>
+              <mat-error *ngIf="LastName.invalid">
+                {{ getLastNameErrorMsg()}}
+            </mat-error>
+            </mat-form-field>
+          </div>
         </div>
         <div>
-          <mat-form-field class="name" appearance="outline">
-            <mat-label>Last name</mat-label>
-            <input matInput placeholder="LastName" />
-          </mat-form-field>
-        </div>
-      </div>
-      <div>
           <mat-form-field class="mail" appearance="outline">
             <mat-label>Email id</mat-label>
-            <input matInput placeholder="Email" />
-          </mat-form-field>
-      </div>
-      <div
-        fxLayout="row"
-        fxLayoutAlign="space-evenly center"
-        fxLayout.xs="column"
-      >
-        <div class="mr">
-          <mat-form-field class="password" appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" required />
-            <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
-              >{{ hide ? "visibility_off" : "visibility" }}
-            </mat-icon>
+            <input matInput placeholder="Email" [formControl]="Email"
+            autocomplete="off"
+            required/>
+            <mat-error *ngIf="Email.invalid">
+              {{getEmailErrorMsg()}}
+          </mat-error>
           </mat-form-field>
         </div>
-        <div>
-          <mat-form-field class="password" appearance="outline">
-            <mat-label>Confirm</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" required />
-            <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
-              >{{ hide ? "visibility_off" : "visibility" }}
-            </mat-icon>
-          </mat-form-field>
+        <div
+          fxLayout="row"
+          fxLayoutAlign="space-evenly center"
+          fxLayout.xs="column"
+        >
+          <div class="mr">
+            <mat-form-field class="password" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput
+              [type]="hide ? 'password' : 'text'"
+              [formControl]="Password"
+              autocomplete="off"
+              required/>
+              <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+                >{{ hide ? "visibility_off" : "visibility" }}
+              </mat-icon>
+              <mat-error *ngIf="Password.invalid">
+                {{getPasswordErrorMsg()}}
+            </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="password" appearance="outline">
+              <mat-label>Confirm</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" required [formControl]="ConfirmPassword"
+              autocomplete="off" />
+              <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+                >{{ hide ? "visibility_off" : "visibility" }}
+              </mat-icon>
+              <mat-error *ngIf="ConfirmPassword.invalid">
+                {{getConfirmPasswordErrorMsg()}}
+            </mat-error>
+            </mat-form-field>
+          </div>
         </div>
+        <div class="inputfields1">
+          <a class="sign" [routerLink]="['/login']">sign in instead</a>
+          <button class="next">Register</button>
+        </div>
+      </form>
       </div>
-      <div class="inputfields1">
-        <a class="sign" [routerLink]="['/login']">sign in instead</a>
-        <button class="next">Register</button>
+      <div class="img">
+        <img src="../../../assets/downloadgoogle.jpg" />
       </div>
+    
     </div>
-    <div class="img">
-      <img src="../../../assets/downloadgoogle.jpg" />
-    </div>
-  </div>
+ 
 </body>
