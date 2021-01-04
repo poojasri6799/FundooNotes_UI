@@ -11,5 +11,5 @@ export class ForgetPasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  hide = true;
 }

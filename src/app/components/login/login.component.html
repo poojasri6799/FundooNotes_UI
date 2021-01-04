@@ -27,8 +27,9 @@
         </mat-icon>
       </mat-form-field>
     </div>
+    <a [routerLink]="['/forget']">forget password?</a>
     <div class="inputfields1">
-      <a class="sign" href="../registration/registration.component.html" type="text">sign up instead</a>
+      <a class="sign" [routerLink]="['/register']">sign up instead</a>
       <button class="next">Login</button>
     </div>
   </div>
