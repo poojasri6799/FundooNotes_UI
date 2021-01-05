@@ -6,11 +6,11 @@ import { UserService } from '../../services/userservices/user.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   hide = true;
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) {}
 
   Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
@@ -47,6 +47,4 @@ export class LoginComponent implements OnInit {
       }
     );
   }
- 
-
 }

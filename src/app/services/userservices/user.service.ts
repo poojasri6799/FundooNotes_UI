@@ -28,8 +28,9 @@ export class UserService {
     return this.httpService.post(`${this.baseUrl}UserAccount/ForgetPassword`, user);
   }
 
-  resetpass(user:any) {
+  resetpass(user:any, token:any) {
+    let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
     console.log("user service called");
-    return this.httpService.post(`${this.baseUrl}UserAccount/ResetPassword`, user);
+    return this.httpService.post1(`${this.baseUrl}UserAccount/ResetPassword`, user, true, options);
   }
 }

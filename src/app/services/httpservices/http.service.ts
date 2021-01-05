@@ -11,14 +11,12 @@ export class HttpService {
   constructor(private http: HttpClient) { }
   token:any;
 
-  post(url:any, user:any) {
-    //let options = { headers: new HttpHeaders({ 'Authorization': this.token, 'Content-Type': 'application/x-www-form-urlencoded' }) }
+  post(url:any, user:any) { 
     console.log(user);
     return this.http.post(url, user)
   }
 
-  // post(url:any, data:any, isHeaderRequired:any = false, headers = null) {
-  //   return this.http.post(url, data, isHeaderRequired && headers)
-  // }
-
+  post1(url:any, data:any, isHeaderRequired:any = false, headers:any = null) {
+    return this.http.post(url, data, isHeaderRequired && headers)
+  }
 }

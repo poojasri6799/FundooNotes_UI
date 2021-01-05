@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/userservices/user.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { UserService } from '../../services/userservices/user.service';
 })
 export class ResetPasswordComponent implements OnInit {
   hide = true;
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService, private route:ActivatedRoute) { }
 
   Password = new FormControl('', [
     Validators.minLength(8),
@@ -28,10 +28,13 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   reset() {
+    //let token = this.router.snapshot.params.token;
+    let token = this.route.snapshot.params.token;
+    console.log(token);
     let data = {
       newPassword: this.Password.value
     };
-    this.userService.resetpass(data).subscribe(
+    this.userService.resetpass(data, token).subscribe(
       (result: any) => {
         console.log(result);
       },
