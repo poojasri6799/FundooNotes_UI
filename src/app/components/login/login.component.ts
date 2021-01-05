@@ -40,7 +40,8 @@ export class LoginComponent implements OnInit {
 
     this.userService.Login(data).subscribe(
       (result: any) => {
-        console.log(result);
+        console.log('login successfully',result);
+        localStorage.setItem('token',result['id']);
       },
       (error) => {
         console.log(error);

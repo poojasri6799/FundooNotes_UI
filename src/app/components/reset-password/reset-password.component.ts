@@ -28,7 +28,6 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   reset() {
-    //let token = this.router.snapshot.params.token;
     let token = this.route.snapshot.params.token;
     console.log(token);
     let data = {

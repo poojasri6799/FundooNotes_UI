@@ -9,10 +9,7 @@ import { environment } from '../../../environments/environment'
 export class UserService {
 
   constructor(private httpService:HttpService ) { }
-
-  // registration(data : any){
-  //   return  this.httpService.post('UserAccount/Register',data)
-  //   }
+  
   baseUrl = environment.baseUrl;
   registration(user:any) {
     console.log("user service called");
