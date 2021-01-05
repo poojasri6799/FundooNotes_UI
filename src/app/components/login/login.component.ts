@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../../services/userservices/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   hide = true;
-  constructor() { }
+  constructor(private router: Router, private userService: UserService) { }
 
   Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
@@ -31,10 +33,19 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    let userData = {
-      "email": this.Email.value,
-      "password": this.Password.value
-    }
+    let data = {
+      mailId: this.Email.value,
+      password: this.Password.value,
+    };
+
+    this.userService.Login(data).subscribe(
+      (result: any) => {
+        console.log(result);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
  
 

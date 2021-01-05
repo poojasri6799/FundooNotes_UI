@@ -57,21 +57,21 @@ export class RegistrationComponent implements OnInit {
 
   register() {
     let data = {
-      FirstName: this.FirstName.value,
-      LastName: this.LastName.value,
-      email: this.Email.value,
-      
-      password: this.Password.value,
-      service:'advance'
-
-      // "firstName": "Chia",
-      // "lastName": "Kokkiligadda",
-      // "mailId": "chai@gmail.com",
-      // "password": "chai@123"
+      firstName: this.FirstName.value,
+      lastName: this.LastName.value,
+      mailId: this.Email.value,
+      password: this.Password.value
+      //service: 'advance',
     };
     //console.log(data);
-    this.userService.registration(data).subscribe((res) => {
-      console.log(' success ', res);
-    });
+
+    this.userService.registration(data).subscribe(
+      (result: any) => {
+        console.log(result);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
