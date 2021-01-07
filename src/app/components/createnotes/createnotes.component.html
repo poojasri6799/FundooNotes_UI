@@ -1,0 +1,25 @@
+<div fxLayout="column">
+    <div fxLayoutAlign="center">
+        <div>
+            <mat-card (click)="reset=false" *ngIf="reset" class="front-card">
+                <mat-form-field >
+                    <input matInput placeholder="Take a note..." autocomplete="off">                   
+                </mat-form-field>
+            </mat-card>
+            <mat-card *ngIf="!reset" class="back-card">
+                <form >
+                    <mat-form-field  class="input">
+                        <input matInput autocomplete="off" placeholder="Title" [formControl]="title" required>
+                    </mat-form-field>
+                    <mat-form-field class="input">
+                        <input matInput placeholder="Take a note" rows="3" autocomplete="off" autofocus [formControl]="message" required>
+                    </mat-form-field>
+                    <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between center" fxLayout="row" fxLayoutAlign="space-between start" class="div">
+                    <app-icons></app-icons>                                   
+                    <button type="submit" mat-button (click)="addNote()">close</button>
+                </span>   
+                </form> 
+            </mat-card>
+        </div>
+    </div>
+</div>

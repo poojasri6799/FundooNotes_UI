@@ -1,0 +1,109 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  //position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// .nav{
+//   display: flex;
+//   flex-direction: column;
+// }
+.container {
+  position: fixed;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+}
+
+.mat-list-option[aria-selected="true"] {
+  background-color: #feefc3;
+}
+
+.mat-list-option:hover {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.example-toolbar{
+  background-color: transparent;
+  //height: 100px;
+}
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+.input-card {
+  width: 47vw;
+  height: 3vh;
+  margin-left: 4vw;
+  transition: none !important;
+  box-shadow: none !important;
+  background-color: #f1f3f4;
+}
+
+.input-feild {
+  width: 44.6vw;
+  margin-top: -40px;
+  padding-left: 35px;
+}
+
+.input-feild input {
+  width: 80%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: lighter;
+  background-color: transparent;
+}
+
+// .input-card button {
+//   border: none;
+//   padding-bottom: 0.5vh;
+//   outline: none;
+//   pointer-events: none;
+//   background-color: transparent;
+// }
+
+
+// .material-icons-outlined{
+//   margin-left: 25px;
+//   margin-bottom: 25px;
+// }
+
+.material-icons-outlined{
+  //margin: 25px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.abc{
+  padding-left: 8px;
+}
+
+img{
+  margin-left: 10px;
+}
+h1.example-app-name {
+  margin-left: 10px;
+}
+
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  flex: 1 0 auto;
+}
+
+.mat-list-base {
+  padding-top: 3px !important;
+  //display: block;
+  //-webkit-tap-highlight-color: transparent;
+}
