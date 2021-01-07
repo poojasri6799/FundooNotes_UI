@@ -1,11 +1,11 @@
-<div fxLayout="row">
+<div fxLayout="row" width=100%>
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="example-toolbar">
       <button mat-icon-button (click)="snav.toggle()">
           <mat-icon (click)="IsdisplayNavBar()">menu</mat-icon>
       </button>
       <img src="../../../assets/keep.svg">
-      <h1 class="example-app-name">Fundoo</h1>
+      <h1 class="example-app-name">Keep</h1>
       <mat-card class="input-card">
         <mat-icon>search</mat-icon>
         <div class="input-feild">
@@ -14,18 +14,26 @@
       </mat-card>  
   </mat-toolbar>
 
-  <div *ngIf="!displayNavBar" style="width: 10%; display: flex; flex-direction: column;">   
+  <div fxLayout="column" fxLayoutAlign="space-around start" *ngIf="!displayNavBar" 
+  >
+    <div fxFlex.xs="90">
+        <div fxFlex="10% ">        
+            <span class="nav ">
       <mat-icon class="material-icons-outlined">emoji_objects</mat-icon>
       <mat-icon class="material-icons-outlined">notifications</mat-icon>
       <mat-icon class="material-icons-outlined">edit</mat-icon>
       <mat-icon class="material-icons-outlined">archive</mat-icon>
       <mat-icon class="material-icons-outlined">delete</mat-icon>
+      </span>
+      </div>
+    </div>
   </div>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"fixedTopGap="56"  
       style="display: flex; flex-direction: row;" 
       >
+
         <div fxLayout="column" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">       
             <mat-icon class="material-icons-outlined" >emoji_objects</mat-icon>
             <mat-icon class="material-icons-outlined">notifications</mat-icon>

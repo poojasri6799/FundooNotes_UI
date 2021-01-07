@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef } from '@angular/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
 
   mobileQuery: MediaQueryList;
 
