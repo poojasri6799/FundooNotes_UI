@@ -10,6 +10,10 @@ export class NoteComponent implements OnInit {
 
   constructor() { }
 
+  // receiveMessage($event) {
+  //   this.message = $event
+  // }
+
   ngOnInit(): void {
   }
 

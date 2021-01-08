@@ -1,11 +1,14 @@
 button{
-    margin-left: 300px;
+    margin-left: 450px;
 }
 
-// .note1{
-//     margin-bottom: 10px;
-// }
+.note1{
+    margin-bottom: 10px;
+}
 
+img{
+    margin-left: 120px;
+}
 .back-card:hover{
     box-shadow: 0 0 11px rgb(119, 118, 118);
 }
@@ -42,9 +45,6 @@ button{
     cursor: pointer;
 }
 
-// .settings {
-//     flex: 1 1 auto;
-// }
 
 .material-icons-outlined {
     padding: 0px 10px 0px 10px;
