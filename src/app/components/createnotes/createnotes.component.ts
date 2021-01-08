@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { NoteservicesService } from '../../services/noteservice/noteservices.service';
 import { FormControl, Validators } from '@angular/forms';
+import {  EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-createnotes',
@@ -9,32 +11,51 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class CreatenotesComponent implements OnInit {
 
-  //@Output() change1 = new EventEmitter<any>();
   reset = true
+  // click(){
+  //   this.reset = true;
+  // }
 
-  constructor(private note: NoteservicesService) { }
+  constructor(private noteServices: NoteservicesService) { }
+  @Output() messageEvent = new EventEmitter<any>();
 
   ngOnInit(): void {
   }
 
   title = new FormControl();
   message = new FormControl();
-  notePinned = false;
-  card = false;
-  reminder = false;
-
+  
   addNote() {
     let noteData = {
       "title": this.title.value,
       "message": this.message.value
     }
-
-    // this.note.addNotes(noteData).subscribe(response:any => {
-    //   this.change1.emit();
-      
-    // }
-
-    //)
+    let token = localStorage.getItem('token')
+    console.log('note added successfully');
+    this.noteServices.add(noteData, token).subscribe(response =>{
+      console.log(response);
+      this.messageEvent.emit();
+    })
   }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

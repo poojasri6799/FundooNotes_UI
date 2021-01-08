@@ -1,25 +1,25 @@
 <div fxLayout="column" class="header">
-    <div fxLayoutAlign="center">
-        <div>
-            <mat-card (click)="reset=false" *ngIf="reset" class="front-card">
-                <mat-form-field >
-                    <input matInput placeholder="Take a note..." autocomplete="off">                   
-                </mat-form-field>
-            </mat-card>
-            <mat-card *ngIf="!reset" class="back-card">
-                <form >
-                    <mat-form-field  class="input">
-                        <input matInput autocomplete="off" placeholder="Title" [formControl]="title" required>
-                    </mat-form-field>
-                    <mat-form-field class="input">
-                        <input matInput placeholder="Take a note" rows="3" autocomplete="off" autofocus [formControl]="message" required>
-                    </mat-form-field>
-                    <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between center" fxLayout="row" fxLayoutAlign="space-between start" class="div">
-                    <app-icons></app-icons>                                   
-                    <button type="submit" mat-button (click)="addNote()">close</button>
-                </span>   
-                </form> 
-            </mat-card>
-        </div>
+    <div fxLayoutAlign="center center">
+        <mat-card (click)="reset=false" *ngIf="reset" class="view">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="note">
+                    <input type="text" placeholder="Take a note..">
+                    <mat-icon class="icon">create</mat-icon>
+                </div>
+            </div>
+        </mat-card>
+        <mat-card *ngIf="!reset" class="back-card">
+            <div fxFlex="100" fxLayout="column" fxLayoutAlign="space-between center">
+                <div class="note note1">
+                    <input matInput placeholder="Title" [formControl]="title" >
+                </div>
+                <div class="note note1">
+                    <input matInput placeholder="Take a note..." autofocus [formControl]="message">
+                </div>
+                <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between center" fxLayout="row" fxLayoutAlign="space-between start" class="div">                                 
+                <button type="submit" mat-button (click)="addNote()">close</button>
+                </span>
+            </div> 
+        </mat-card>
     </div>
 </div>

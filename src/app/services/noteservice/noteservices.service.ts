@@ -10,11 +10,13 @@ import { environment } from '../../../environments/environment'
 export class NoteservicesService {
 
   constructor(private httpService:HttpService) { }
+
+  baseUrl = environment.baseUrl;
+
+  add(noteData:any, token:any) {
+    let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
+    return this.httpService.post1(`${this.baseUrl}Note`, noteData, true, options);
+  }
 }
 
-// baseUrl = environment.baseUrl;
 
-//   addNotes(data:any) {
-//     let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem('Token') }) }
-//     return this.httpService.post(`${this.baseUrl}Notes/AddNote`, data, true, options);
-// }

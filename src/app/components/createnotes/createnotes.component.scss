@@ -1,88 +1,50 @@
-
-.back-card  {
-    width: 600px;
-  
+button{
+    margin-left: 300px;
 }
 
-.front-card {
-    display: flex;
-    align-items: center;
-    width: 600px;
-    height: 20px;
+// .note1{
+//     margin-bottom: 10px;
+// }
+
+.back-card:hover{
+    box-shadow: 0 0 11px rgb(119, 118, 118);
+}
+
+.note{
+    width: 44.6vw;
+    padding-left: 10px;
+}
+.note input{
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-right: 195px;
+    background-color: transparent;
+}
+
+.view{
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 9px;
+    margin-top: 2px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);           
+    width: 500px;
+    height: 30px;
+    margin-top: 40px;
 }
 
-@media only screen and (max-width: 750px) {
-    .front-card{
-        width: 550px;
-    }
+.view:hover {
+    box-shadow: 0 0 11px rgb(119, 118, 118);
 }
-
-@media only screen and (max-width: 596px) {
-    .front-card{
-       width: 350px;
-       margin-left: 8%;
- 
-    }
-}
-
-@media only screen and (max-width: 470px) {
-    .front-card{
-
-       width: 300px;
-       margin-left: 8%;
-   
-    }
-}
-
-@media only screen and (max-width: 410px) {
-    .front-card{
-        width: 280px;
-        margin-left: 5%;
-        
-    }
-}
-
-@media only screen and (max-width: 370px) {
-    .front-card{
-        width: 350px;
-        margin-left: 9%;
-       
-    }
-}
-
-@media only screen and (max-width: 660px) {
-    .back-card{
-        width: 400px;
-    }
-}
-
-@media only screen and (max-width: 578px) {
-    .back-card{
-        width: 300px;
-    }
-}
-
-@media only screen and (max-width: 370px) {
-    .back-card{
-        width: 100%;
-       margin-left: 9%;
-        margin-top: -10px;
-    }
-}
-
 .mat-icon {
     cursor: pointer;
 }
 
-.settings {
-    flex: 1 1 auto;
-}
-
-.mat-form-field {
-    width: 90%;
-}
+// .settings {
+//     flex: 1 1 auto;
+// }
 
 .material-icons-outlined {
     padding: 0px 10px 0px 10px;
@@ -91,3 +53,66 @@
 .input {
     margin-left: 9px;
 }
+
+
+
+
+// @media only screen and (max-width: 750px) {
+//     .front-card{
+//         width: 550px;
+//     }
+// }
+
+// @media only screen and (max-width: 596px) {
+//     .front-card{
+//        width: 350px;
+//        margin-left: 8%;
+ 
+//     }
+// }
+
+// @media only screen and (max-width: 470px) {
+//     .front-card{
+
+//        width: 300px;
+//        margin-left: 8%;
+   
+//     }
+// }
+
+// @media only screen and (max-width: 410px) {
+//     .front-card{
+//         width: 280px;
+//         margin-left: 5%;
+        
+//     }
+// }
+
+// @media only screen and (max-width: 370px) {
+//     .front-card{
+//         width: 350px;
+//         margin-left: 9%;
+       
+//     }
+// }
+
+// @media only screen and (max-width: 660px) {
+//     .back-card{
+//         width: 400px;
+//     }
+// }
+
+// @media only screen and (max-width: 578px) {
+//     .back-card{
+//         width: 300px;
+//     }
+// }
+
+// @media only screen and (max-width: 370px) {
+//     .back-card{
+//         width: 100%;
+//        margin-left: 9%;
+//         margin-top: -10px;
+//     }
+// }
+

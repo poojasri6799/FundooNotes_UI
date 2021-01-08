@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
 
     this.userService.Login(data).subscribe(
       (result: any) => {
+        this.router.navigate(['dashboard']);
         console.log('login successfully',result);
         localStorage.setItem('token',result['data']['token']);
         localStorage.setItem('Email',result['data']['mailId']);
@@ -47,7 +48,7 @@ export class LoginComponent implements OnInit {
         console.log(localStorage.getItem("token"))
         console.log(localStorage.getItem("Email"))
 
-        this.router.navigate(['dashboard']);
+        
       },
       (error) => {
         console.log(error);
