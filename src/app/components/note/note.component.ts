@@ -7,14 +7,22 @@ import { NoteservicesService } from '../../services/noteservice/noteservices.ser
   styleUrls: ['./note.component.scss']
 })
 export class NoteComponent implements OnInit {
+  notesArray = [];
 
-  constructor() { }
-
-  // receiveMessage($event) {
-  //   this.message = $event
-  // }
+  constructor(private noteServices: NoteservicesService) { }
 
   ngOnInit(): void {
+    this.getNote();
   }
 
+  getNote(){
+    let token= localStorage.getItem('token')
+    console.log("notes displayed");
+    this.noteServices.getdata(token).subscribe((response:any) => {
+      console.log(response);
+      this.notesArray = response['data']
+      console.log(this.notesArray);
+      
+    })
+  }
 }

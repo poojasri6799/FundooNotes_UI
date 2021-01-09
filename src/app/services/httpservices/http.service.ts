@@ -19,4 +19,16 @@ export class HttpService {
   post1(url:any, data:any, isHeaderRequired:any = false, headers:any = null) {
     return this.http.post(url, data, isHeaderRequired && headers)
   }
+
+  get(url:any, isHeaderRequired:any = false, headers:any = null) {
+    return this.http.get(url, isHeaderRequired && headers)
+  }
+
+  // put(url:any, data:any, isHeaderRequired:any = false, headers:any = null) {
+  //   return this.http.post(url, data, isHeaderRequired && headers)
+  // }
+
+  // delete1(url:any,data:any,isHeaderRequired:any = false, headers:any = null) {
+  //   return this.http.delete(url,data,isHeaderRequired && headers)
+  // }
 }

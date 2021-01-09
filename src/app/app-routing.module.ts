@@ -9,13 +9,17 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: '',   redirectTo: 'login', pathMatch: 'full' }, // redirect to `first-component`
   { path: 'register', component: RegistrationComponent },
   { path: 'forget', component: ForgetPasswordComponent },
   { path: 'resetPassword/:token', component: ResetPasswordComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    children: [{ path: 'note', component: NoteComponent },
+    children: [
+      
+      { path: '',   redirectTo: 'note', pathMatch: 'full' },
+      { path: 'note', component: NoteComponent },
               ]
   },
 ];

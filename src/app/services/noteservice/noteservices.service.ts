@@ -17,6 +17,20 @@ export class NoteservicesService {
     let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
     return this.httpService.post1(`${this.baseUrl}Note`, noteData, true, options);
   }
+
+
+  getdata(token:any) {
+    console.log(token);
+    let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
+    return this.httpService.get(`${this.baseUrl}Note`,true, options);
+  }
+
+
+  deleteNotes(data:any,token:any){
+    console.log(token);
+    let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
+    return this.httpService.post1(`${this.baseUrl}Note`,data, true, options);
+  }
 }
 
 

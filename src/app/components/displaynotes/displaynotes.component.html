@@ -1,4 +1,16 @@
-
-<div fxLayout="column" fxLayoutAlign="center center">
-    <p>displaynotes works!</p>
+<!-- <p>displaynotes works!</p> -->
+  
+<div class="displaynote">
+    <mat-card *ngFor="let note of AllNotes" class="notes">
+        <div>
+           <p class="wordBreakTitle"> {{note.title}}</p>
+        </div>
+        <div>
+            <p class="wordBreak"> {{note.message}}</p>
+        </div>
+        <div class="div">
+            <app-icons [note]=""></app-icons>
+        </div>
+    </mat-card>
 </div>
+
