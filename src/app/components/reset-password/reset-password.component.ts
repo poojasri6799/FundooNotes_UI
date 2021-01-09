@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/userservices/user.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-reset-password',
@@ -10,7 +12,13 @@ import { UserService } from '../../services/userservices/user.service';
 })
 export class ResetPasswordComponent implements OnInit {
   hide = true;
-  constructor(private router: Router, private userService: UserService, private route:ActivatedRoute) { }
+  constructor(private router: Router, private userService: UserService, private route:ActivatedRoute,private snackBar: MatSnackBar) { }
+
+  openSnackBar() {
+    this.snackBar.open('Reset password', 'sucessfully', {
+      duration: 1500
+    });
+  }
 
   Password = new FormControl('', [
     Validators.minLength(8),

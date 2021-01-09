@@ -23,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 //import {MatDrawerHarness} from '@angular/material/sidenav/testing';
 
 
@@ -45,7 +46,7 @@ import { MatMenuModule } from '@angular/material/menu';
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatIconModule,MatInputModule,FlexLayoutModule,
     FormsModule, ReactiveFormsModule,HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule,
-    MatCardModule, MatMenuModule
+    MatCardModule, MatMenuModule, MatSnackBarModule
     
   ],
   providers: [],

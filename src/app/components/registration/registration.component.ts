@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/userservices/user.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +12,12 @@ import { UserService } from '../../services/userservices/user.service';
 export class RegistrationComponent implements OnInit {
   hide = true;
 
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(private router: Router, private userService: UserService,private snackBar: MatSnackBar) {}
+  openSnackBar() {
+    this.snackBar.open('Register', 'sucessfully', {
+      duration: 1500
+    });
+  }
 
   Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/userservices/user.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,13 @@ import { UserService } from '../../services/userservices/user.service';
 })
 export class LoginComponent implements OnInit {
   hide = true;
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(private router: Router, private userService: UserService, private snackBar: MatSnackBar) {}
+
+  openSnackBar() {
+    this.snackBar.open('logged In', 'sucessfully', {
+      duration: 3000
+    });
+  }
 
   Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
@@ -40,18 +47,19 @@ export class LoginComponent implements OnInit {
 
     this.userService.Login(data).subscribe(
       (result: any) => {
-        this.router.navigate(['dashboard']);
+        
         console.log('login successfully',result);
         localStorage.setItem('token',result['data']['token']);
         localStorage.setItem('Email',result['data']['mailId']);
         console.log(result);
         console.log(localStorage.getItem("token"))
         console.log(localStorage.getItem("Email"))
-
+        this.router.navigate(['dashboard']);
         
       },
       (error) => {
         console.log(error);
+        //this.openSnackBar("login successfully")
       }
     );
   }
