@@ -13,13 +13,14 @@
         <div fxFlex="100" fxLayout="column" fxLayoutAlign="space-between center">
             <div class="note note1">
                 <input matInput placeholder="Title" [formControl]="title" >
-                <img src="../../../assets/pin.svg">
+                <img src="../../../assets/pin.svg" class="image">
             </div>
             <div class="note note1">
                 <input matInput placeholder="Take a note..." autofocus [formControl]="message">
             </div>
-            <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between center" fxLayout="row" fxLayoutAlign="space-between start" class="div">                                 
-                <button type="submit" mat-button (click)="addNote()">close</button>
+            <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between center" fxLayout="row" fxLayoutAlign="space-between start" class="div">  
+                <app-icons [note]=""></app-icons>                               
+                <button type="submit" mat-button (click)="addNote()" class="close">close</button>
             </span>
         </div> 
     </mat-card>

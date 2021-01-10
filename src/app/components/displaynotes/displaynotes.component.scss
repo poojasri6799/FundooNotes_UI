@@ -9,6 +9,10 @@
     position: relative fixed;
 }
 
+img{
+    margin-left: 120px;
+}
+
 .wordBreak {
     word-break: break-all;
     display: block; /* or inline-block */
@@ -35,7 +39,7 @@
 
 
 .notes{
-    width: 200px;
+    width: 230px;
     min-height: 20px;
     position: relative;
     margin-right: 15px;
