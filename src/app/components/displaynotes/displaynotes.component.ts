@@ -10,6 +10,14 @@ export class DisplaynotesComponent implements OnInit {
   @Input() AllNotes:any;
 
   constructor() { }
+  iconvisible:any = false;
+  mouseenter(){
+    this.iconvisible=true; 
+  }
+
+  mouseleave(){
+    this.iconvisible=false;
+  }
 
   ngOnInit(): void {
   }

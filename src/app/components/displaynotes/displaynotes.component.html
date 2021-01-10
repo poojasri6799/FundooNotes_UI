@@ -1,15 +1,16 @@
 <!-- <p>displaynotes works!</p> -->
   
-<div class="displaynote">
+<div class="displaynote" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
     <mat-card *ngFor="let note of AllNotes" class="notes">
-        <div>
-           <p class="wordBreakTitle"> {{note.title}} <img src="../../../assets/pin.svg"></p>
+        <div fxLayout="row">
+           <p class="wordBreakTitle"> {{note.title}}</p>
+           <img src="../../../assets/pin.svg">
         </div>
         <div>
             <p class="wordBreak"> {{note.message}} </p>
         </div>
-        <div class="div">
-            <app-icons [note]="note"></app-icons>
+        <div class="div" >
+            <app-icons class="icon" [note]="note" [hidden]="!iconvisible" ></app-icons>
         </div>
     </mat-card>
 </div>
