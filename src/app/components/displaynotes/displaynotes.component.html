@@ -1,6 +1,6 @@
 <!-- <p>displaynotes works!</p> -->
   
-<div class="displaynote" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+<div div fxLayout="row" fxLayoutAlign="start start" class="displaynote" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
     <mat-card *ngFor="let note of AllNotes" class="notes">
         <div fxLayout="row">
            <p class="wordBreakTitle"> {{note.title}}</p>

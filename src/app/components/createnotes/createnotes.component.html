@@ -1,24 +1,24 @@
 <div fxLayoutAlign="center start" fxLayout="column">
     <mat-card (click)="reset=false" *ngIf="reset" class="view">
-        <div fxLayout="row" fxLayoutAlign="space-between center">
-            <div class="note">
+        <div fxLayout="row" fxLayoutAlign="space-between center"  class="note">
+            
                 <input type="text" placeholder="Take a note..">
                 <mat-icon class="icon">create</mat-icon>
-            </div>
+            
         </div>
     </mat-card>
 </div>
-<div fxLayoutAlign="center center" fxLayout="column">
+<div fxLayoutAlign="start center" fxLayout="column">
     <mat-card *ngIf="!reset" class="back-card">
-        <div fxFlex="100" fxLayout="column" fxLayoutAlign="space-between center">
-            <div class="note note1">
+        <div fxLayout="column" fxLayoutAlign="space-between start">
+            <div class="note1">
                 <input matInput placeholder="Title" [formControl]="title" >
                 <img src="../../../assets/pin.svg" class="image">
             </div>
-            <div class="note note1">
+            <div class="note1">
                 <input matInput placeholder="Take a note..." autofocus [formControl]="message">
             </div>
-            <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between center" fxLayout="row" fxLayoutAlign="space-between start" class="div">  
+            <span  fxLayout.xs="row" fxLayoutAlign.xs="space-between start" fxLayout="row" fxLayoutAlign="space-between start" class="div">  
                 <app-icons [note]=""></app-icons>                               
                 <button type="submit" mat-button (click)="addNote()" class="close">close</button>
             </span>
