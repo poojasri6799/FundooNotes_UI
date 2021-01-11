@@ -5,4 +5,26 @@
     font-weight: lighter;
     background-color: transparent;
     padding-bottom: 15px;
+    
+}
+
+// .takeNote{
+//     margin: 0px;
+// }
+
+.note2{
+    overflow:visible;
+    width: 400px;
+}
+
+.takeNote {
+    display: block;
+    padding: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 500px;
+    height: 100%;
+    min-height: inherit;
+    max-height: inherit;
 }

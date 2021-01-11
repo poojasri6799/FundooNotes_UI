@@ -24,7 +24,7 @@ export class UpdateComponent implements OnInit {
   ) {
     console.log(' note data in update', data);
       this.noteId = data.note.noteId,
-      console.log("note id ",this.noteId),
+      //console.log("note id ",this.noteId),
       this.title = data.note.title,
       this.message = data.note.message;
       

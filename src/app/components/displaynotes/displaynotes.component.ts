@@ -22,7 +22,7 @@ export class DisplaynotesComponent implements OnInit {
 
   openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {
-      width: '250px',
+      width: '550px',
       data: {note: note}
     });
 
