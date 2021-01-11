@@ -13,6 +13,8 @@
         </div>
       </mat-card>
       <img class="list" src="../../../assets/listview.svg">
+      <img class="logout" src="../../../assets/logout.svg">
+      
     </mat-toolbar>
 
     <div fxLayout="column" fxLayoutAlign="space-around start" *ngIf="!displayNavBar" style="width: 20px;">
@@ -32,6 +34,21 @@
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
         fixedTopGap="56" style="display: flex; flex-direction: row;">
+        
+        <!-- <div fxLayout="column" fxLayoutAlign="space-around start" *ngIf="!displayNavBar" style="width: 20px;">
+          <div fxFlex.xs="90" style="width: 20px;">
+            <div fxFlex="10%" style="width: 20px;">
+              <span>
+              <mat-icon class="material-icons-outlined">emoji_objects</mat-icon>
+              <mat-icon class="material-icons-outlined">notifications</mat-icon>
+              <mat-icon class="material-icons-outlined">edit</mat-icon>
+              <mat-icon class="material-icons-outlined">archive</mat-icon>
+              <mat-icon class="material-icons-outlined">delete</mat-icon>
+              </span>
+            </div>
+          </div>
+        </div> -->
+
         <div fxLayout="column">
           <div class="colour">
             <div fxLayout="row" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">

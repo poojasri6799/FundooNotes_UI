@@ -1,17 +1,24 @@
 <!-- <p>displaynotes works!</p> -->
   
-<div div fxLayout="row" fxLayoutAlign="start start" class="displaynote" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+<div fxLayout="row" fxLayoutAlign="start start" class="displaynote" fxLayout="row wrap">
     <mat-card *ngFor="let note of AllNotes" class="notes">
-        <div fxLayout="row">
-           <p class="wordBreakTitle"> {{note.title}}</p>
-           <img src="../../../assets/pin.svg">
-        </div>
         <div>
-            <p class="wordBreak"> {{note.message}} </p>
+            <div fxLayout="row">
+                <div fxFlex="90">
+                    <p class="wordBreakTitle"> {{note.title}}</p>
+                </div>
+                <div fxFlex="10">
+                    <img src="../../../assets/pin.svg">
+                </div>
+            </div>
+            <div>
+                <p class="wordBreak"> {{note.message}} </p>
+            </div>
         </div>
-        <div class="div" >
-            <app-icons class="icon" [note]="note" [hidden]="!iconvisible" ></app-icons>
+        <div class="div">
+            <app-icons class="icon" [note]="note"></app-icons>
         </div>
     </mat-card>
 </div>
+
 

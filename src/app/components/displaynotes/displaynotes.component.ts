@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class DisplaynotesComponent implements OnInit {
   @Input() AllNotes:any;
+  
 
   constructor() { }
   iconvisible:any = false;

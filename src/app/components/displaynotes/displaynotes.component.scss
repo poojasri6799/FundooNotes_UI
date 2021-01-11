@@ -1,54 +1,63 @@
-.displaynote{
-   
-    margin-left: 300px;
-   
-    padding: 30px 30px 30px 30px;
-    
-    border-style: hidden;
-    
+.displaynote {
+  margin-left: 300px;
+  padding: 30px 30px 30px 30px;
+  border-style: hidden;
 }
+
 
 
 .wordBreak {
-    width: 250px;
-    //height: 200px;
-    word-break: break-all;
-    display: block; /* or inline-block */
-    text-overflow: ellipsis;
-    overflow: hidden;
-    word-wrap: break-word;
-    //overflow: hidden;
-    max-height: 15.5em;
+  width: 250px;
+  //height: 200px;
+  word-break: break-all;
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  //overflow: hidden;
+  max-height: 15.5em;
 }
 
 .wordBreakTitle {
-    width: 250px;
-    //height: 200px;
-    word-break: break-all;
-    letter-spacing: 0.00625em;
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    display: block; 
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 3.6em;
-  }
-
-img{
-    margin-left: 80px;
+  width: 250px;
+  //height: 200px;
+  word-break: break-all;
+  letter-spacing: 0.00625em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
 }
 
-.notes{
-    margin-right: 15px;
-    margin-bottom: 0px;
-    overflow: visible;
-    position: relative;
-    //height: 120px;
-    width: 250px;
-    
+img {
+  margin-left: 80px;
 }
+
+.notes {
+  margin-right: 15px;
+  margin-bottom: 0px;
+  overflow: visible;
+  position: relative;
+  //height: 120px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.div, img {
+    visibility: hidden;
+}
+
+.notes:hover .div,
+.notes:hover img
+{
+    visibility: visible;
+}
+
+
 
 // @media screen and (max-width: 1040px){
 //     .displaynote{
@@ -64,10 +73,10 @@ img{
 
 // }
 
-@media screen and (max-width: 360px){
-    .displaynote{
-        margin-left: 100px;
-    }
+@media screen and (max-width: 360px) {
+  .displaynote {
+    margin-left: 100px;
+  }
 }
 
 // @media screen and (max-width: 600px) {
