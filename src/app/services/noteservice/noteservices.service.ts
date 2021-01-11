@@ -28,14 +28,14 @@ export class NoteservicesService {
   updateNote(token:any,data:any) {
     console.log(token);
     let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
-    return this.httpService.put(`${this.baseUrl}Note/{noteId}`,data,true, options);
+    return this.httpService.put(`${this.baseUrl}Note/${data.noteId}`,data,true, options);
   }
 
 
   deleteNotes(data:any,token:any){
     console.log(token);
     let options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }) }
-    return this.httpService.post1(`${this.baseUrl}Note/{noteId}`,data, true, options);
+    return this.httpService.delete(`${this.baseUrl}Note/${data.noteId}`, true, options);
   }
 }
 

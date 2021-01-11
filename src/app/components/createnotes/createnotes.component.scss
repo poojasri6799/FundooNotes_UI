@@ -3,22 +3,10 @@ button{
 }
 
 .note1{
-    // margin-bottom: 10px;
-    //margin-left: 100px;
     padding-bottom: 15px;
-    // width: 100px;
+   
 }
 
-
-// .back-card {
-//     //place-content: center space-between;
-//     //align-items: center;
-//     flex-direction: column;
-//     box-sizing: border-box;
-//     //background-color: red;
-//     flex: 1 1 100%;
-//     max-width: 100%;
-// }
 
 img{
     margin-left: 250px;
@@ -29,23 +17,10 @@ img{
 }
 
 .back-card{
-    // transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
-    // display: block;
-    // position: relative;
-    // padding: 9px;
-    // margin-top: 2px;
-    // border-radius: 10px;
     width: 500px;
-    // height: 30px;
-    // margin-top: 40px;
 }
 
-// .note{
-//     // width: 44.6vw;
-//     // width: 70%;
-//     //padding-bottom: 25px;
-//     //padding-left: 10px;
-// }
+
 .note input{
     outline: none;
     border: none;
@@ -65,9 +40,6 @@ img{
 }
 
 .view{
-    // transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
-    // display: block;
-    // position: relative;
     padding: 9px;
     margin-left: 400px;
     border-radius: 10px;
@@ -79,20 +51,7 @@ img{
 .view:hover {
     box-shadow: 0 0 11px rgb(119, 118, 118);
 }
-// mat-icon {
-//     cursor: pointer;
-//     margin-left: 75px;
-// }
 
-
-// .div{
-//     margin-right: 180px;
-//     margin-left: 150px;
-// }
-
-// .image{
-//     // margin-left: 20px;
-// }
 
 .close{
     margin-left: 220px;

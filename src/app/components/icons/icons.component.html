@@ -17,6 +17,12 @@
     </div>
     
     <div>
-        <mat-icon>more_vert</mat-icon>
+        <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
+        <mat-menu #menu="matMenu" >
+            <button mat-menu-item (click)=" deleteNote()">
+            <span>delete</span>
+            </button>
+        </mat-menu>
     </div>
- </div>
+</div>
+

@@ -1,9 +1,9 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-    <mat-card class="takeNote" fxLayout='column' fxFlex.xs='98' fxFlex='100'>
+    <div class="takeNote" fxLayout='column' fxFlex='100' fxFlex.xs='98'>
 
       <div fxLayout="row">
-        <div fxFlex="95">
-            <input matInput placeholder="Title" [formControl]="title" >
+        <div fxFlex="95" class="note1">
+            <input matInput placeholder="Title" id="abc">
         </div>
         <!-- <div fxFlex="5">
           <span mat-icon-button matSuffix  matTooltip="pin">
@@ -13,16 +13,16 @@
         </div> -->
       </div>
   
-      <div fxFlex="100" style="width: 500px">
-        <input matInput placeholder="Take a note..." autofocus [formControl]="message">
+      <div fxFlex="100" style="width: 500px" class="note1">
+        <input matInput placeholder="Take a note..." autofocus id="xyz">
       </div>
       <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-between center">
         <div fxFlex="60">
           <app-icons></app-icons>
         </div>
         <div>
-          <button mat-icon-button matSuffix (click)='updateData(data)'>close</button>
+          <button mat-icon-button matSuffix (click)='updateData()'>close</button>
         </div>
       </div>
-    </mat-card>
+    </div>
 </div>

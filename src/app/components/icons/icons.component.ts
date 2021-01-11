@@ -2,6 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NoteservicesService } from '../../services/noteservice/noteservices.service';
 import {DataService} from '../../services/dataservices/data.service'
 
+
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
@@ -20,7 +26,7 @@ export class IconsComponent implements OnInit {
     console.log(this.note);
     let data = {
     
-      noteId: [this.note.id],
+      noteId: [this.note.noteId],
       isTrash: true
     }
     let token = localStorage.getItem('token')
@@ -30,5 +36,12 @@ export class IconsComponent implements OnInit {
       
     });
   }
+
+  
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
 
 }

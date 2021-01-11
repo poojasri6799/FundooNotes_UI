@@ -13,13 +13,9 @@ import { FormControl} from '@angular/forms';
   styleUrls: ['./update.component.scss'],
 })
 export class UpdateComponent implements OnInit {
-  // title: any;
-  // message: any;
-  // noteId: any;
-
-  title = new FormControl();
-  message= new FormControl();
-  noteId= new FormControl();
+  title: any;
+  message: any;
+  noteId: any;
 
   constructor(
     private noteService: NoteservicesService,
@@ -27,20 +23,20 @@ export class UpdateComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     console.log(' note data in update', data);
-    (this.title = data.note.title),
-      (this.message = data.note.message),
-      (this.noteId = data.note.noteId);
+      this.noteId = data.note.noteId,
+      console.log("note id ",this.noteId),
+      this.title = data.note.title,
+      this.message = data.note.message;
+      
   }
-
-  pin:any;
 
   ngOnInit(): void {}
 
-  updateData(data1:any) {
+  updateData() {
     let data = {
-      noteId: this.noteId.value,
-      title: this.title.value,
-      message: this.message.value,
+      noteId: this.noteId,
+      title: (<HTMLInputElement>document.getElementById('abc')).value,
+      message: (<HTMLInputElement>document.getElementById('xyz')).value
     };
 
     console.log('success ', data);

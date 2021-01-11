@@ -24,7 +24,7 @@ export class NoteComponent implements OnInit {
   }
 
   receiveMessage($event:any){
-    console.log(" message get all notee from craete note",$event);
+    console.log(" message get all note from craete note",$event);
     this.getNote();
   }
 
