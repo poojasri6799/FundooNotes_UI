@@ -1,5 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-//import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { UpdateComponent } from '../update/update.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormControl} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-displaynotes',
@@ -10,17 +14,22 @@ export class DisplaynotesComponent implements OnInit {
   @Input() AllNotes:any;
   
 
-  constructor() { }
-  iconvisible:any = false;
-  mouseenter(){
-    this.iconvisible=true; 
-  }
-
-  mouseleave(){
-    this.iconvisible=false;
-  }
+  constructor(public dialog: MatDialog) { }
+  
 
   ngOnInit(): void {
+  }
+
+  openDialog(note:any): void {
+    const dialogRef = this.dialog.open(UpdateComponent, {
+      width: '250px',
+      data: {note: note}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
   }
 
 }

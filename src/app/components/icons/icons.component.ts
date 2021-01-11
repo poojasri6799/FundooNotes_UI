@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NoteservicesService } from '../../services/noteservice/noteservices.service';
+import {DataService} from '../../services/dataservices/data.service'
 
 @Component({
   selector: 'app-icons',
@@ -8,7 +9,7 @@ import { NoteservicesService } from '../../services/noteservice/noteservices.ser
 })
 export class IconsComponent implements OnInit {
 
-  constructor(private noteServices:NoteservicesService) { }
+  constructor(private noteServices:NoteservicesService, private dataServices:DataService) { }
 
   ngOnInit(): void {
   }
@@ -25,7 +26,7 @@ export class IconsComponent implements OnInit {
     let token = localStorage.getItem('token')
     this.noteServices.deleteNotes(data,token).subscribe((response)=>{
       console.log(" deleted sucessfull ");
-      // this.dataService.changeMessage("deleted")
+      this.dataServices.changeMessage("deleted");
       
     });
   }

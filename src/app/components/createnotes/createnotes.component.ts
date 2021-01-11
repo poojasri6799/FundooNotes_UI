@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { NoteservicesService } from '../../services/noteservice/noteservices.service';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import {  EventEmitter } from '@angular/core';
 
 
@@ -12,9 +12,6 @@ import {  EventEmitter } from '@angular/core';
 export class CreatenotesComponent implements OnInit {
 
   reset = true
-  // click(){
-  //   this.reset = true;
-  // }
 
   constructor(private noteServices: NoteservicesService) { }
   @Output() messageEvent = new EventEmitter<any>();

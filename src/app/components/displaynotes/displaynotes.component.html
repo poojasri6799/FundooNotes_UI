@@ -4,7 +4,7 @@
     <mat-card *ngFor="let note of AllNotes" class="notes">
         <div>
             <div fxLayout="row">
-                <div fxFlex="90">
+                <div fxFlex="90" (click)="openDialog(note)">
                     <p class="wordBreakTitle"> {{note.title}}</p>
                 </div>
                 <div fxFlex="10">

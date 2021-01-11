@@ -26,6 +26,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { UpdateComponent } from './components/update/update.component';
 //import {MatDrawerHarness} from '@angular/material/sidenav/testing';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -48,7 +49,7 @@ import { UpdateComponent } from './components/update/update.component';
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatIconModule,MatInputModule,FlexLayoutModule,
     FormsModule, ReactiveFormsModule,HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule,
-    MatCardModule, MatMenuModule, MatSnackBarModule
+    MatCardModule, MatMenuModule, MatSnackBarModule, MatDialogModule
     
   ],
   providers: [],
