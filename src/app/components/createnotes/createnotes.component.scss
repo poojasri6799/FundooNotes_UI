@@ -1,120 +1,73 @@
-button{
-    margin-left: 450px;
+button {
+  margin-left: 450px;
 }
 
-.note1{
-    padding-bottom: 15px;
-   
+.note1 {
+  padding-bottom: 15px;
 }
 
-
-img{
-    margin-left: 250px;
+img {
+  margin-left: 250px;
 }
-.back-card:hover{
-    box-shadow: 0 0 11px rgb(119, 118, 118);
-    
+.back-card:hover {
+  box-shadow: 0 0 11px rgb(119, 118, 118);
 }
 
-.back-card{
-    width: 500px;
+.back-card {
+  width: 500px;
 }
 
-
-.note input{
-    outline: none;
-    border: none;
-    font-size: 15px;
-    font-weight: lighter;
-    //margin-right: 195px;
-    background-color: transparent;
+.note input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: lighter;
+  background-color: transparent;
 }
 
-.note1 input{
-    outline: none;
-    border: none;
-    font-size: 15px;
-    font-weight: lighter;
-    //margin-right: 195px;
-    background-color: transparent;
+.note1 input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: lighter;
+  background-color: transparent;
 }
 
-.view{
-    padding: 9px;
-    margin-left: 400px;
-    border-radius: 10px;
-    width: 500px;
-    height: 30px;
-    
+.view {
+  padding: 9px;
+  border-radius: 10px;
+  width: 500px;
+  height: 30px;
 }
 
 .view:hover {
-    box-shadow: 0 0 11px rgb(119, 118, 118);
+  box-shadow: 0 0 11px rgb(119, 118, 118);
 }
 
-
-.close{
-    margin-left: 220px;
+.close {
+  margin-left: 220px;
 }
 
+@media only screen and (max-width: 750px) {
+  .view {
+    width: 400px;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  .view {
+    width: 300px;
+  }
+}
 
-// @media only screen and (max-width: 750px) {
-//     .front-card{
-//         width: 550px;
-//     }
-// }
+@media only screen and (max-width: 400px) {
+  .view {
+    width: 250px;
+  }
+}
 
-// @media only screen and (max-width: 596px) {
-//     .front-card{
-//        width: 350px;
-//        margin-left: 8%;
- 
-//     }
-// }
-
-// @media only screen and (max-width: 470px) {
-//     .front-card{
-
-//        width: 300px;
-//        margin-left: 8%;
-   
-//     }
-// }
-
-// @media only screen and (max-width: 410px) {
-//     .front-card{
-//         width: 280px;
-//         margin-left: 5%;
-        
-//     }
-// }
-
-// @media only screen and (max-width: 370px) {
-//     .front-card{
-//         width: 350px;
-//         margin-left: 9%;
-       
-//     }
-// }
-
-// @media only screen and (max-width: 660px) {
-//     .back-card{
-//         width: 400px;
-//     }
-// }
-
-// @media only screen and (max-width: 578px) {
-//     .back-card{
-//         width: 300px;
-//     }
-// }
-
-// @media only screen and (max-width: 370px) {
-//     .back-card{
-//         width: 100%;
-//        margin-left: 9%;
-//         margin-top: -10px;
-//     }
-// }
-
+@media only screen and (max-width: 450px) {
+  .view {
+    margin-left: 30px;
+  }
+}

@@ -1,4 +1,4 @@
-<div fxLayout="row" width=100%>
+<div fxLayout="row" fxLayoutAlign="space-between start" width=100%>
   <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar class="example-toolbar">
       <button mat-icon-button (click)="snav.toggle()">
@@ -6,20 +6,22 @@
       </button>
       <img src="../../../assets/keep.svg">
       <h1 class="example-app-name">Fundoo</h1>
-      <mat-card class="input-card">
-        <mat-icon>search</mat-icon>
-        <div class="input-feild">
-          <input type="search" placeholder="search">
-        </div>
-      </mat-card>
-      <img class="list" src="../../../assets/listview.svg">
-      <img class="logout" src="../../../assets/logout.svg">
+      <div fxLayout="row" fxLayoutAlign="start space-around">
+        <mat-card class="input-card">
+          <mat-icon>search</mat-icon>
+          <div class="input-feild">
+            <input type="search" placeholder="search">
+          </div>
+        </mat-card>
+        <img class="list" src="../../../assets/listview.svg">
+        <img class="logout" src="../../../assets/logout.svg">
+    </div>
       
     </mat-toolbar>
 
-    <div fxLayout="column" fxLayoutAlign="space-around start" *ngIf="!displayNavBar" style="width: 20px;">
-      <div fxFlex.xs="90" style="width: 20px;">
-        <div fxFlex="10%" style="width: 20px;">
+    <div fxLayout="column" fxLayoutAlign="space-around start" *ngIf="!displayNavBar" >
+      <div fxFlex.xs="90">
+        <div fxFlex="10%">
           <span>
           <mat-icon class="material-icons-outlined">emoji_objects</mat-icon>
           <mat-icon class="material-icons-outlined">notifications</mat-icon>
@@ -53,31 +55,31 @@
           <div class="colour">
             <div fxLayout="row" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">
               <mat-icon class="material-icons-outlined">emoji_objects</mat-icon>
-              <mat-nav-list style="width:200px;" class="material-icons-outlined">Note</mat-nav-list>
+              <mat-nav-list style="width:90px;" class="material-icons-outlined">Note</mat-nav-list>
             </div> 
           </div>
           <div class="colour">
             <div fxLayout="row" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">
               <mat-icon class="material-icons-outlined">notifications</mat-icon>
-              <mat-nav-list style="width:200px;" class="material-icons-outlined">Reminder</mat-nav-list>
+              <mat-nav-list style="width:90px;" class="material-icons-outlined">Reminder</mat-nav-list>
             </div> 
           </div>
           <div class="colour">
             <div fxLayout="row" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">
               <mat-icon class="material-icons-outlined">edit</mat-icon>
-              <mat-nav-list style="width:200px;" class="material-icons-outlined">Edit</mat-nav-list>
+              <mat-nav-list style="width:90px;" class="material-icons-outlined">Edit</mat-nav-list>
             </div> 
           </div>
           <div class="colour">
               <div fxLayout="row" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">
                 <mat-icon class="material-icons-outlined">archive</mat-icon>
-                <mat-nav-list style="width:200px;" class="material-icons-outlined">Archive</mat-nav-list>
+                <mat-nav-list style="width:90px;" class="material-icons-outlined">Archive</mat-nav-list>
               </div> 
           </div>
           <div class="colour">
             <div fxLayout="row" fxLayoutAlign="start start" fxFlex.xs="90" fxFlex="10%">
               <mat-icon class="material-icons-outlined">delete</mat-icon>
-              <mat-nav-list style="width:200px;" class="material-icons-outlined">Trash</mat-nav-list>
+              <mat-nav-list style="width:90px;" class="material-icons-outlined">Trash</mat-nav-list>
             </div> 
           </div>
         </div>
@@ -85,6 +87,6 @@
     </mat-sidenav-container>   
   </div>
 </div>
-<div style="margin-top: 90px; margin-right: 100px;">
+<div style="margin-top: 90px; ">
 <router-outlet></router-outlet>
 </div>

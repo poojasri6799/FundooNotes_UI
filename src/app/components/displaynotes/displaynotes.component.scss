@@ -1,25 +1,22 @@
 .displaynote {
-  margin-left: 300px;
-  padding: 30px 30px 30px 30px;
+  margin-left: 200px;
+   padding: 30px 30px 30px 30px;
   border-style: hidden;
 }
 
 
 .wordBreak {
   width: 250px;
-  //height: 200px;
   word-break: break-all;
   display: block; /* or inline-block */
   text-overflow: ellipsis;
   overflow: hidden;
   word-wrap: break-word;
-  //overflow: hidden;
   max-height: 15.5em;
 }
 
 .wordBreakTitle {
   width: 250px;
-  //height: 200px;
   word-break: break-all;
   letter-spacing: 0.00625em;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
@@ -39,7 +36,6 @@
   margin-bottom: 0px;
   overflow: visible;
   position: relative;
-  //height: 120px;
   width: 250px;
   margin-bottom: 15px;
 }
@@ -56,31 +52,9 @@
 
 
 
-// @media screen and (max-width: 1040px){
-//     .displaynote{
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;
-//         margin-left: 300px;
-//         margin-right: 400px;
-//         padding: 30px 30px 30px 30px;
-//         position: relative;
-//     }
-
-// }
-
 @media screen and (max-width: 360px) {
   .displaynote {
     margin-left: 100px;
   }
 }
 
-// @media screen and (max-width: 600px) {
-//     .notes {
-//       width: 600px;
-//       position: relative;
-//       border-radius: 10px;
-//       overflow: hidden;
-//     }
-//   }

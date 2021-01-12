@@ -11,7 +11,17 @@ import {  EventEmitter } from '@angular/core';
 })
 export class CreatenotesComponent implements OnInit {
 
+  //reset = true
+  //reset:any
   reset = true
+  setNote(){
+    if(this.reset == true)
+      this.reset = false
+    else
+      this.reset = true
+  }
+  
+  
 
   constructor(private noteServices: NoteservicesService) { }
   @Output() messageEvent = new EventEmitter<any>();
